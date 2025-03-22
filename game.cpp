@@ -1,6 +1,15 @@
 #include "game.h"
 
 
-Piece getPosition(Position p, std::vector<std::vector<Piece>>* board) {
-	return (*board).at(0).at(0);
+Game::Game() {
+	MainWindow mainWindow;
+	mainWindow.wait_for_close();
+}
+
+void Game::refreshBoard() {
+	// for (std::vector<Cell&> row : board) {
+	// 	for(Cell* c : row) {
+	// 		c->update(mainWindow);
+	// 	}
+	// }
 }

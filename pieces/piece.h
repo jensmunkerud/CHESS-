@@ -6,16 +6,18 @@
 // ROOT CLASS FOR ALL PIECES
 class Piece { 
 	public:
-	Color col;
+	Team col;
 	Type type;
 	Position pos;
-	Piece(Color col, Type type, Position pos, bool canBeBlocked, bool infRange);
+	std::string filePath;
+	Piece(Team col, Type type, Position pos, bool canBeBlocked, bool infRange) :
+	col{col}, type{type}, pos{pos}, canBeBlocked{canBeBlocked}, infRange{infRange} {};
+	virtual ~Piece() {};
 	
 	protected:
 	bool canBeBlocked = false;
 	bool infRange = false;
-	std::string filePath;
 	std::vector<Position> validPositions;
-	virtual void updateValidPositions(const std::vector<std::vector<Piece>>& board)
+	virtual void updateValidPositions(const std::vector<std::vector<Piece*>>& board)
 	{validPositions.clear();};
 };
