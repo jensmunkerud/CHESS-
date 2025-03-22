@@ -1,4 +1,4 @@
-#include "piece.h"
+#include "pieces/piece.h"
 
 class Game {
 	public:
@@ -8,3 +8,4 @@ class Game {
 	private:
 	std::vector<std::vector<Piece>> board;
 };
+
