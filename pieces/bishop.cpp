@@ -1,3 +1,4 @@
+#pragma once
 #include "blockable.cpp"
 
 class Bishop : public Blockable {

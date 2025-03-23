@@ -1,10 +1,6 @@
 #pragma once
 #include "AnimationWindow.h"
 #include "widgets/Button.h"
-#include "vector"
-#include "pieces/piece.h"
-#include <functional>
-
 
 class MainWindow : public TDT4102::AnimationWindow {
 	public:
@@ -14,14 +10,11 @@ class MainWindow : public TDT4102::AnimationWindow {
 	static constexpr int windowHeight {600};
 	static constexpr int sidePad {100};
 	static constexpr std::string title = "CHESS+";
+	int dimension = std::min(windowWidth,  windowHeight) - 2*sidePad;
 	MainWindow();
 	// TDT4102::Button flipButton;
-	void drawPiece(const Piece* p);
 
 	private:
 	void drawBoard();
-	// void drawPieces();
-	// This vector contains the whole board (which is made up of buttons)
-	// std::vector<std::vector<TDT4102::Button*>> boardButtons; // MIGHT NOT NEED THIS NOW
 	TDT4102::Button* flipButton;
 };

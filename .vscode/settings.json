@@ -79,6 +79,14 @@
 		"memory_resource": "cpp",
 		"random": "cpp",
 		"type_traits": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"codecvt": "cpp",
+		"condition_variable": "cpp",
+		"numbers": "cpp",
+		"semaphore": "cpp",
+		"span": "cpp",
+		"system_error": "cpp",
+		"format": "cpp",
+		"cinttypes": "cpp"
 	}
 }

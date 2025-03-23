@@ -2,6 +2,7 @@
 #include "Color.h"
 #include "pieces/types.h"
 #include "iostream"
+#include "cell.h"
 
 void hideBtn(TDT4102::Button& button, int amount) {
 	static int presses;
@@ -29,19 +30,20 @@ MainWindow::MainWindow() :
 
 
 void MainWindow::drawBoard() {
-	int dimension = std::min(windowWidth, windowHeight) - 2*sidePad;
-	for (int rank = 0; rank < 8; rank++) {
-		for (int file = 0; file < 8; file++) {
-			TDT4102::Button* btn = new TDT4102::Button {TDT4102::Point{sidePad + rank*dimension/8, sidePad + file*dimension/8}, static_cast<uint>(dimension/6), static_cast<uint>(dimension/6), ""};
-			add(*btn);
-			btn->setCallback([&] () {btnPressed();});
-			if ((file + rank) % 2 == 0 ) {
-				btn->setButtonColor(TDT4102::Color::beige);
-			} else {
-				btn->setButtonColor(TDT4102::Color::green);
-			}
-		}
-	}
+	// int dimension = std::min(windowWidth, windowHeight) - 2*sidePad;
+	// for (int rank = 0; rank < 8; rank++) {
+	// 	for (int file = 0; file < 8; file++) {
+	// 		TDT4102::Button* btn = new TDT4102::Button {TDT4102::Point{sidePad + rank*dimension/8, sidePad + file*dimension/8}, static_cast<uint>(dimension/6), static_cast<uint>(dimension/6), ""};
+	// 		add(*btn);
+	// 		btn->setCallback([&] () {btnPressed();});
+	// 		if ((file + rank) % 2 == 0 ) {
+	// 			btn->setButtonColor(TDT4102::Color::beige);
+	// 		} else {
+	// 			btn->setButtonColor(TDT4102::Color::green);
+	// 		}
+	// 		// Cell* c = new Cell(*this, {sidePad + rank*dimension/8, sidePad + file*dimension/8});
+	// 	}
+	// }
 }
 
 // void MainWindow::drawPieces() {
