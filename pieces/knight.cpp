@@ -1,8 +1,14 @@
-#include "piece.h"
+#pragma once
+#include "piece.cpp"
 
-class Pawn : public Piece {
+class Knight : public Piece {
 	public:
-	void updateValidPositions(const std::vector<std::vector<Piece>>& board) override {
-		validPositions.clear();
-	}
+	static constexpr std::array<Position, 8> KNIGHT_DIRECTIONS = {{
+		{2, 1}, {2, -1}, {-2, 1}, {-2, -1}, {1, -2}, {-1, -2}, {1, 2}, {-1, 2}
+	}};
+	Knight(Team team, Position pos) : 
+		Piece(team, Type::KNIGHT, pos) {}
+	// void updateValidPositions(const std::vector<std::vector<Piece>>& board) override {
+	// 	validPositions.clear();
+	// }
 };

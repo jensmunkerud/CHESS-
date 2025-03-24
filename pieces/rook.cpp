@@ -1,8 +1,12 @@
-#include "piece.h"
+#pragma once
+#include "blockable.cpp"
 
-class Pawn : public Piece {
+class Rook : public Blockable {
 	public:
-	void updateValidPositions(const std::vector<std::vector<Piece>>& board) override {
-		validPositions.clear();
-	}
+	static constexpr std::array<Position, 4> ROOK_DIRECTIONS = {{
+		{1, 0}, {0, 1}, {-1, 0}, {0, -1}
+	}};
+	Rook(Team team, Position pos) : 
+		Blockable(team, Type::ROOK, pos, 
+		std::vector<Position>(ROOK_DIRECTIONS.begin(), ROOK_DIRECTIONS.end())) {}
 };

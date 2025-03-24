@@ -1,9 +1,12 @@
-#include "piece.h"
+#pragma once
+#include "piece.cpp"
 
 class Pawn : public Piece {
 	public:
-	void updateValidPositions(const std::vector<std::vector<Piece>>& board) override {
-		Piece::updateValidPositions(board);
+	Pawn(Team team, Position pos) :
+		Piece(team, Type::PAWN, pos) {};
+	void updateValidPositions() override {
+		Piece::updateValidPositions();
 		// Straight forward
 
 		// Diagonal (if piece is of opposite color)

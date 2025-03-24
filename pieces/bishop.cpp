@@ -6,7 +6,7 @@ class Bishop : public Blockable {
 	static constexpr std::array<Position, 4> BISHOP_DIRECTIONS = {{
 		{1, 1}, {-1, 1}, {-1, -1}, {1, -1}
 	}};
-	Bishop(Team col, Position pos) : 
-	Blockable(col, Type::BISHOP, pos, true, true, 
+	Bishop(Team team, Position pos) : 
+	Blockable(team, Type::BISHOP, pos, 
 		std::vector<Position>(BISHOP_DIRECTIONS.begin(), BISHOP_DIRECTIONS.end())) {}
 };

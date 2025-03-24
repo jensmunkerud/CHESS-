@@ -4,7 +4,8 @@
 
 enum class Team {
 	BLACK,
-	WHITE
+	WHITE,
+	NOTEAM
 };
 
 enum class Type {
