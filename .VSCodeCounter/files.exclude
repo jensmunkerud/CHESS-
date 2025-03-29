@@ -1,0 +1,3 @@
+{
+	"exclude": ["subprojects", ".git", "builddir", ".vscode"]
+}

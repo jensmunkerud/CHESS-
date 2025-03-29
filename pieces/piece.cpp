@@ -11,7 +11,7 @@ class Piece {
 	Type type;
 	Position pos;
 	std::string filePath;
-	virtual void updateValidPositions()
+	virtual void updateValidPositions() // This func gets run before the class specific ones
 	{validPositions.clear();};
 
 	// Constructor HAS to be defined here for some reason..

@@ -13,6 +13,8 @@ class Cell {
 	MainWindow& mainWindow;
 	Cell(MainWindow& mainWindow, Position physicalPosition, Position pos);
 	TDT4102::Button* btn;
+	TDT4102::Color col;
+	static constexpr int offset = 2;
 	void clear();
 	void setPiece(Piece* p);
 	bool hasPiece();
