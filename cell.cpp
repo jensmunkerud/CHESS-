@@ -42,10 +42,21 @@ void Cell::update() {
 }
 
 void Cell::btnPressed() {
-	std::cout << "My position: " << pos.x  << ", " << pos.y << std::endl;
-	if (piece != nullptr) {
-		piece->updateValidPositions(game);
+	if (game.isViewingGame) {
+		return;
+	}
+	// We are either a path or off the path
+	if (game.selectedCell != nullptr) {
+		if (!drawPath) {
+			game.selectedCell = nullptr;
+		} else {
+			// A move might be made TO THIS cell!
+			game.makeMove(pos);
+		}
 	} else {
-		// Nothing happens here (cell is empty)
+		if (piece != nullptr) {
+			piece->updateValidPositions(game);
+			game.selectedCell = this;
+		}
 	}
 }

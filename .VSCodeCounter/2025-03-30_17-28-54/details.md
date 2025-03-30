@@ -1,10 +1,10 @@
 # Details
 
-Date : 2025-03-23 19:47:24
+Date : 2025-03-30 17:28:54
 
 Directory /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+
 
-Total : 142 files,  52711 codes, 29013 comments, 7264 blanks, all 88988 lines
+Total : 144 files,  52868 codes, 28984 comments, 7288 blanks, all 89140 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -12,25 +12,27 @@ Total : 142 files,  52711 codes, 29013 comments, 7264 blanks, all 88988 lines
 | filename | language | code | comment | blank | total |
 | :--- | :--- | ---: | ---: | ---: | ---: |
 | [README.md](/README.md) | Markdown | 1 | 0 | 1 | 2 |
-| [cell.cpp](/cell.cpp) | C++ | 30 | 0 | 7 | 37 |
-| [cell.h](/cell.h) | C++ | 18 | 0 | 2 | 20 |
-| [game.cpp](/game.cpp) | C++ | 14 | 8 | 7 | 29 |
-| [game.h](/game.h) | C++ | 17 | 2 | 6 | 25 |
+| [cell.cpp](/cell.cpp) | C++ | 47 | 6 | 7 | 60 |
+| [cell.h](/cell.h) | C++ | 26 | 1 | 2 | 29 |
+| [game.cpp](/game.cpp) | C++ | 73 | 11 | 18 | 102 |
+| [game.h](/game.h) | C++ | 21 | 2 | 6 | 29 |
 | [loadGame.cpp](/loadGame.cpp) | C++ | 0 | 0 | 1 | 1 |
-| [main.cpp](/main.cpp) | C++ | 10 | 16 | 1 | 27 |
-| [mainWindow.cpp](/mainWindow.cpp) | C++ | 27 | 27 | 7 | 61 |
-| [mainWindow.h](/mainWindow.h) | C++ | 21 | 4 | 4 | 29 |
-| [pieces/bishop.cpp](/pieces/bishop.cpp) | C++ | 11 | 0 | 1 | 12 |
-| [pieces/blockable.cpp](/pieces/blockable.cpp) | C++ | 12 | 6 | 4 | 22 |
-| [pieces/king.cpp](/pieces/king.cpp) | C++ | 7 | 0 | 1 | 8 |
-| [pieces/knight.cpp](/pieces/knight.cpp) | C++ | 7 | 0 | 1 | 8 |
-| [pieces/pawn.cpp](/pieces/pawn.cpp) | C++ | 7 | 2 | 2 | 11 |
-| [pieces/piece.cpp](/pieces/piece.cpp) | C++ | 12 | 0 | 2 | 14 |
-| [pieces/piece.h](/pieces/piece.h) | C++ | 19 | 1 | 3 | 23 |
-| [pieces/queen.cpp](/pieces/queen.cpp) | C++ | 7 | 0 | 1 | 8 |
-| [pieces/rook.cpp](/pieces/rook.cpp) | C++ | 7 | 0 | 1 | 8 |
-| [pieces/types.h](/pieces/types.h) | C++ | 34 | 6 | 6 | 46 |
-| [saveGame.cpp](/saveGame.cpp) | C++ | 0 | 0 | 1 | 1 |
+| [main.cpp](/main.cpp) | C++ | 10 | 0 | 1 | 11 |
+| [mainWindow.cpp](/mainWindow.cpp) | C++ | 20 | 0 | 6 | 26 |
+| [mainWindow.h](/mainWindow.h) | C++ | 18 | 1 | 3 | 22 |
+| [pieces/bishop.h](/pieces/bishop.h) | C++ | 14 | 0 | 2 | 16 |
+| [pieces/blockable.cpp](/pieces/blockable.cpp) | C++ | 24 | 4 | 2 | 30 |
+| [pieces/blockable.h](/pieces/blockable.h) | C++ | 8 | 0 | 1 | 9 |
+| [pieces/king.h](/pieces/king.h) | C++ | 9 | 3 | 1 | 13 |
+| [pieces/knight.h](/pieces/knight.h) | C++ | 10 | 3 | 1 | 14 |
+| [pieces/pawn.h](/pieces/pawn.h) | C++ | 11 | 2 | 2 | 15 |
+| [pieces/piece.cpp](/pieces/piece.cpp) | C++ | 13 | 0 | 8 | 21 |
+| [pieces/piece.h](/pieces/piece.h) | C++ | 18 | 2 | 3 | 23 |
+| [pieces/queen.h](/pieces/queen.h) | C++ | 14 | 0 | 2 | 16 |
+| [pieces/rook.h](/pieces/rook.h) | C++ | 14 | 0 | 2 | 16 |
+| [pieces/types.h](/pieces/types.h) | C++ | 43 | 7 | 8 | 58 |
+| [saveGame.cpp](/saveGame.cpp) | C++ | 13 | 1 | 5 | 19 |
+| [saveGame.h](/saveGame.h) | C++ | 11 | 0 | 1 | 12 |
 | [subprojects/animationwindow/include/AnimationWindow.h](/subprojects/animationwindow/include/AnimationWindow.h) | C++ | 81 | 23 | 30 | 134 |
 | [subprojects/animationwindow/include/Color.h](/subprojects/animationwindow/include/Color.h) | C++ | 314 | 11 | 9 | 334 |
 | [subprojects/animationwindow/include/Font.h](/subprojects/animationwindow/include/Font.h) | C++ | 18 | 0 | 5 | 23 |

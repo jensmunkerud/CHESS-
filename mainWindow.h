@@ -2,7 +2,9 @@
 #include "AnimationWindow.h"
 #include "widgets/Button.h"
 #include "iostream"
+#include "loadGame.h"
 
+class Game;
 class MainWindow : public TDT4102::AnimationWindow {
 	public:
 	static constexpr int posX {300};
@@ -13,9 +15,9 @@ class MainWindow : public TDT4102::AnimationWindow {
 	static constexpr std::string title = "CHESS+";
 	int dimension = std::min(this->width(),  this->height()) - 2*sidePad;
 	MainWindow();
-	// TDT4102::Button flipButton;
+	Game* game;
 
 	private:
-	void drawBoard();
-	TDT4102::Button* flipButton;
+	TDT4102::Button* viewGameBtn;
+	void viewGame();
 };

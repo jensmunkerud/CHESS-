@@ -1,5 +1,4 @@
 #include "blockable.h"
-#include "../game.h"
 
 Blockable::Blockable(Team team, Type type, Position pos, const std::vector<Position>& directions) : 
 	Piece(team, type, pos), relativeDirections{directions} {}
@@ -11,15 +10,20 @@ void Blockable::updateValidPositions(Game& game) {
 	for (Position p : relativeDirections) {
 		for (int range = 1; range < 8; range++) {
 			Position testPos {pos.x + p.x*range, pos.y + p.y*range};
+			// Filter out of board limits
 			if (testPos.x > 7 || testPos.x < 0 || testPos.y > 7 || testPos.y < 0) {
 				break;
 			}
-			// if (board.at(testPos.x).at(testPos.y) != nullptr) {
-			// 	std::cout << "we have a path" << std::endl;
-			// 	board.at(testPos.x).at(testPos.y)->drawPath = true;
-			// }
 			if (game.checkCell(testPos) == Team::NOTEAM) {
-				
+				game.drawPath(testPos);
+				testPositions.push_back(testPos);
+			} else if (game.checkCell(testPos) != team) {
+				// This piece is of opposite team and we MIGHT kill it
+				testPositions.push_back(testPos);
+				game.drawPath(testPos);
+				break;
+			} else {
+				break;
 			}
 		}
 	}

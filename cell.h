@@ -25,4 +25,5 @@ class Cell {
 	
 	private:
 	void btnPressed();
+	bool isSelected = false;
 };

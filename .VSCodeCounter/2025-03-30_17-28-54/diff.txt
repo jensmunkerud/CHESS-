@@ -1,0 +1,52 @@
+Date : 2025-03-30 17:28:54
+Directory : /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+
+Total : 26 files,  105 codes, -11 comments, 18 blanks, all 112 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C++      |         26 |        105 |        -11 |         18 |        112 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                             | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                |         26 |        105 |        -11 |         18 |        112 |
+| . (Files)                                                                                        |          8 |         68 |          4 |         10 |         82 |
+| pieces                                                                                           |         18 |         37 |        -15 |          8 |         30 |
++--------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                         | language | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/cell.cpp             | C++      |         11 |          1 |          0 |         12 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/cell.h               | C++      |          0 |          1 |          0 |          1 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/game.cpp             | C++      |         31 |          1 |          5 |         37 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/game.h               | C++      |          5 |          0 |          0 |          5 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/mainWindow.cpp       | C++      |         -4 |          0 |          0 |         -4 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/mainWindow.h         | C++      |          1 |          0 |          0 |          1 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/bishop.cpp    | C++      |        -11 |          0 |         -1 |        -12 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/bishop.h      | C++      |         14 |          0 |          2 |         16 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/blockable.cpp | C++      |          6 |         -2 |         -1 |          3 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/blockable.h   | C++      |          8 |          0 |          1 |          9 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/king.cpp      | C++      |         -9 |         -3 |         -1 |        -13 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/king.h        | C++      |          9 |          3 |          1 |         13 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/knight.cpp    | C++      |        -10 |         -3 |         -1 |        -14 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/knight.h      | C++      |         10 |          3 |          1 |         14 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/pawn.cpp      | C++      |        -10 |         -2 |         -2 |        -14 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/pawn.h        | C++      |         11 |          2 |          2 |         15 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/piece.cpp     | C++      |        -13 |         -2 |          2 |        -13 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/piece.h       | C++      |         18 |          2 |          3 |         23 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/pieceOLD.cpp  | C++      |          0 |        -14 |         -2 |        -16 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/queen.cpp     | C++      |        -11 |          0 |         -1 |        -12 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/queen.h       | C++      |         14 |          0 |          2 |         16 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/rook.cpp      | C++      |        -11 |          0 |         -1 |        -12 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/rook.h        | C++      |         14 |          0 |          2 |         16 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/types.h       | C++      |          8 |          1 |          2 |         11 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/saveGame.cpp         | C++      |         13 |          1 |          4 |         18 |
+| /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/saveGame.h           | C++      |         11 |          0 |          1 |         12 |
+| Total                                                                                            |          |        105 |        -11 |         18 |        112 |
++--------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

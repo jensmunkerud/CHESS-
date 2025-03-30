@@ -1,5 +1,6 @@
 #include "game.h"
 #include "cell.h"
+#include "saveGame.h"
 #include "pieces/bishop.h"
 #include "pieces/pawn.h"
 #include "pieces/rook.h"
@@ -18,10 +19,10 @@ Game::Game(MainWindow& mw) : mainWindow{mw} {
 			Team team = rank < 4 ? Team::BLACK : Team::WHITE;
 
 			// Populates row 1 & 6 with black / white pawns
-			if (rank == 1 || rank == 6) {
-				Piece* p = new Pawn(team, Position{file, rank});
-				row.at(file)->setPiece(p);
-			}
+			// if (rank == 1 || rank == 6) {
+			// 	Piece* p = new Pawn(team, Position{file, rank});
+			// 	row.at(file)->setPiece(p);
+			// }
 			
 			if (rank == 0 || rank == 7) {
 				Piece* p;
@@ -54,7 +55,9 @@ Game::Game(MainWindow& mw) : mainWindow{mw} {
 		}
 		board.push_back(row);
 	}
+	saveGame = new SaveGame(board);
 }
+
 
 void Game::refreshBoard() {
 	for (std::vector<Cell*> row : board) {
@@ -62,10 +65,44 @@ void Game::refreshBoard() {
 			c->update();
 		}
 	}
+	if (selectedCell == nullptr) {
+		clearPaths();
+	}
 }
 
 
 Team Game::checkCell(Position pos) {
-	std::cout << "CONNECTION!!" << std::endl;
+	if (board.at(pos.y).at(pos.x)->piece != nullptr) {
+		return board.at(pos.y).at(pos.x)->piece->team;
+	}
 	return Team::NOTEAM;
+}
+
+
+void Game::clearPaths() {
+	for (std::vector<Cell*> row : board) {
+		for (Cell* c : row) {
+			c->drawPath = false;
+		}
+	}
+}
+
+
+void Game::drawPath(Position pos) {
+	board.at(pos.y).at(pos.x)->drawPath = true;
+}
+
+
+void Game::makeMove(Position pos) {
+	board.at(pos.y).at(pos.x)->setPiece(selectedCell->piece);
+	selectedCell->piece->pos = pos;
+	selectedCell->clear();
+	selectedCell = nullptr;
+	saveGame->saveGame(board);
+}
+
+
+void Game::viewGame() {
+	loadGame = new LoadGame();
+	isViewingGame = loadGame->openFile();
 }

@@ -23,6 +23,7 @@ enum class Type {
 // |
 // |
 // 8x0-------8x8
+// .at(y).at(x)
 
 struct Position{
 	int x;
@@ -44,4 +45,19 @@ const std::unordered_map<Type, std::string> typeToPath {
 	{Type::ROOK, "graphics/rook"},
 	{Type::QUEEN, "graphics/queen"},
 	{Type::KING, "graphics/king"},
+};
+
+const std::unordered_map<Type, std::string> typeToName {
+	{Type::PAWN, "Pawn"},
+	{Type::KNIGHT, "Knight"},
+	{Type::BISHOP, "Bishop"},
+	{Type::ROOK, "Rook"},
+	{Type::QUEEN, "Queen"},
+	{Type::KING, "King"},
+};
+
+const std::unordered_map<Team, std::string> teamToName {
+	{Team::BLACK, "BLACK"},
+	{Team::WHITE, "WHITE"},
+	{Team::NOTEAM, "NOTEAM"},
 };

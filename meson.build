@@ -38,6 +38,7 @@ exe = executable(
 'main.cpp',
 'mainWindow.cpp',
 'mainWindow.h',
+'saveGame.h',
 'saveGame.cpp',
 'pieces/blockable.h',
 'pieces/blockable.cpp',

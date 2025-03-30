@@ -2,7 +2,6 @@
 #include <vector>
 #include "types.h"
 #include "iostream"
-// #include "cell.h"
 #include "../game.h"
 
 // ROOT CLASS FOR ALL PIECES
@@ -15,7 +14,7 @@ class Piece {
 	virtual void updateValidPositions(Game& game);  // This func gets run before the class specific ones
 
 	Piece(Team team, Type type, Position pos);
-	// virtual ~Piece() = default;
+	virtual ~Piece() = default;
 
 	protected:
 	// WE NEED TWO SINCE THE VALIDPOSITIONS SHOULD BE CHECKMATE TESTED!!
