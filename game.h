@@ -1,7 +1,9 @@
 #pragma once
-#include "cell.h"
 #include "mainWindow.h"
+#include "pieces/types.h"
 
+
+class Cell;
 class Game {
 	public:
 	MainWindow& mainWindow;
@@ -10,11 +12,11 @@ class Game {
 	void refreshBoard();
 	Team checkCell(Position pos);
 	Game(MainWindow& mw);
+	std::vector<std::vector<Cell*>> board;
 	// Dont need destructor here?? Freeing the board vector
 	// gives malloc double free error, think animationwindow takes care of this :)
 
 	private:
-	std::vector<std::vector<Cell*>> board;
 	bool isSelected;
 	bool whiteTurn;
 };

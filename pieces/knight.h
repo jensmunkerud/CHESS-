@@ -1,5 +1,5 @@
 #pragma once
-#include "piece.cpp"
+#include "piece.h"
 
 class Knight : public Piece {
 	public:

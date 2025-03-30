@@ -1,5 +1,5 @@
 #pragma once
-#include "blockable.cpp"
+#include "blockable.h"
 
 class Bishop : public Blockable {
 	public:
@@ -9,4 +9,8 @@ class Bishop : public Blockable {
 	Bishop(Team team, Position pos) : 
 	Blockable(team, Type::BISHOP, pos, 
 		std::vector<Position>(BISHOP_DIRECTIONS.begin(), BISHOP_DIRECTIONS.end())) {}
+	
+	void updateValidPositions(Game& game) override {
+		Blockable::updateValidPositions(game);
+	};
 };

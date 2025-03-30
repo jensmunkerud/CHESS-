@@ -1,5 +1,11 @@
 #include "game.h"
-
+#include "cell.h"
+#include "pieces/bishop.h"
+#include "pieces/pawn.h"
+#include "pieces/rook.h"
+#include "pieces/knight.h"
+#include "pieces/king.h"
+#include "pieces/queen.h"
 
 Game::Game(MainWindow& mw) : mainWindow{mw} {
 	for (int rank = 0; rank < 8; rank++) {
@@ -7,14 +13,13 @@ Game::Game(MainWindow& mw) : mainWindow{mw} {
 		for (int file = 0; file < 8; file++) {
 
 			// Generates 8x8 grid of buttons
-			Cell* c = new Cell(mainWindow, {mainWindow.sidePad + file*mainWindow.dimension/8, mainWindow.sidePad + rank*mainWindow.dimension/8}, Position{file, rank});
+			Cell* c = new Cell(mainWindow, *this, {mainWindow.sidePad + file*mainWindow.dimension/8, mainWindow.sidePad + rank*mainWindow.dimension/8}, Position{file, rank});
 			row.push_back(c);
 			Team team = rank < 4 ? Team::BLACK : Team::WHITE;
 
 			// Populates row 1 & 6 with black / white pawns
 			if (rank == 1 || rank == 6) {
 				Piece* p = new Pawn(team, Position{file, rank});
-				std::cout << file << std::endl;
 				row.at(file)->setPiece(p);
 			}
 			
@@ -60,6 +65,7 @@ void Game::refreshBoard() {
 }
 
 
-// Piece* Game::checkCell(Position pos) {
-// 	return nullptr;
-// }
+Team Game::checkCell(Position pos) {
+	std::cout << "CONNECTION!!" << std::endl;
+	return Team::NOTEAM;
+}

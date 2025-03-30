@@ -1,4 +1,4 @@
-#include "piece.cpp"
+#include "piece.h"
 
 class King : public Piece {
 	public:

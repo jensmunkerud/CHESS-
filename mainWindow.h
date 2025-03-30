@@ -1,6 +1,7 @@
 #pragma once
 #include "AnimationWindow.h"
 #include "widgets/Button.h"
+#include "iostream"
 
 class MainWindow : public TDT4102::AnimationWindow {
 	public:
