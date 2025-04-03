@@ -87,6 +87,7 @@
 		"span": "cpp",
 		"system_error": "cpp",
 		"format": "cpp",
-		"cinttypes": "cpp"
+		"cinttypes": "cpp",
+		"chrono": "cpp"
 	}
 }

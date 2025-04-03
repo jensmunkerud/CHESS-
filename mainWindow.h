@@ -19,5 +19,7 @@ class MainWindow : public TDT4102::AnimationWindow {
 
 	private:
 	TDT4102::Button* viewGameBtn;
+	TDT4102::Button* shouldSaveBtn;
 	void viewGame();
+	void shouldSaveGame();
 };

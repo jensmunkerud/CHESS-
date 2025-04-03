@@ -47,7 +47,9 @@ const std::unordered_map<Type, std::string> typeToPath {
 	{Type::KING, "graphics/king"},
 };
 
-const std::unordered_map<Type, std::string> typeToName {
+
+// The next types are used for SAVING / LOADING
+const std::unordered_map<Type, std::string> typeToText {
 	{Type::PAWN, "Pawn"},
 	{Type::KNIGHT, "Knight"},
 	{Type::BISHOP, "Bishop"},
@@ -56,8 +58,28 @@ const std::unordered_map<Type, std::string> typeToName {
 	{Type::KING, "King"},
 };
 
-const std::unordered_map<Team, std::string> teamToName {
+const std::unordered_map<std::string, Type> textToType {
+	{"Pawn", Type::PAWN},
+	{"Knight", Type::KNIGHT},
+	{"Bishop", Type::BISHOP},
+	{"Rook", Type::ROOK},
+	{"Queen", Type::QUEEN},
+	{"King", Type::KING},
+};
+
+const std::unordered_map<Team, std::string> teamToText {
 	{Team::BLACK, "BLACK"},
 	{Team::WHITE, "WHITE"},
 	{Team::NOTEAM, "NOTEAM"},
+};
+
+const std::unordered_map<std::string, Team> textToTeam {
+	{"BLACK", Team::BLACK},
+	{"WHITE", Team::WHITE},
+	{"NOTEAM", Team::NOTEAM},
+};
+
+struct rawPiece {
+	Team team;
+	Type type;
 };

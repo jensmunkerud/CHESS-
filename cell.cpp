@@ -7,6 +7,7 @@ Cell::Cell(MainWindow& mainWindow, Game& game, Position physicalPosition, Positi
 	mainWindow.add(*btn);
 	btn->setCallback([&] () {btnPressed();});
 	btn->setButtonColor(TDT4102::Color::beige);
+	btn->setButtonColorActive(TDT4102::Color::beige);
 	// Color here is not important, but when tdt4102::button CHANGES color,
 	// we want to set alpha value to 1 (basically transparent)
 	// NOTE! meson --reconfigure builddir RESETS this alpha value change

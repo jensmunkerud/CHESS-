@@ -16,10 +16,10 @@ void SaveGame::saveGame(std::vector<std::vector<Cell*>> board) {
 		for (std::vector<Cell*> row : board) {
 			for (Cell* c : row) {
 				if (c->hasPiece()) {
-					myFile << teamToName.at(c->piece->team) << "," << typeToName.at(c->piece->type)<< std::endl;
+					myFile << teamToText.at(c->piece->team) << "," << typeToText.at(c->piece->type)<< std::endl;
 					continue;
 				}
-				myFile << teamToName.at(Team::NOTEAM) << std::endl;
+				myFile << teamToText.at(Team::NOTEAM) << std::endl;
 			}
 		}
 	}
