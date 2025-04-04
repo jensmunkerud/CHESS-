@@ -1,10 +1,10 @@
 # Details
 
-Date : 2025-03-25 14:17:16
+Date : 2025-04-03 15:39:06
 
 Directory /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+
 
-Total : 143 files,  52775 codes, 29022 comments, 7271 blanks, all 89068 lines
+Total : 145 files,  53076 codes, 28991 comments, 7310 blanks, all 89377 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -12,25 +12,28 @@ Total : 143 files,  52775 codes, 29022 comments, 7271 blanks, all 89068 lines
 | filename | language | code | comment | blank | total |
 | :--- | :--- | ---: | ---: | ---: | ---: |
 | [README.md](/README.md) | Markdown | 1 | 0 | 1 | 2 |
-| [cell.cpp](/cell.cpp) | C++ | 36 | 2 | 7 | 45 |
-| [cell.h](/cell.h) | C++ | 24 | 0 | 2 | 26 |
-| [game.cpp](/game.cpp) | C++ | 43 | 10 | 13 | 66 |
-| [game.h](/game.h) | C++ | 16 | 2 | 6 | 24 |
-| [loadGame.cpp](/loadGame.cpp) | C++ | 0 | 0 | 1 | 1 |
-| [main.cpp](/main.cpp) | C++ | 13 | 2 | 1 | 16 |
-| [mainWindow.cpp](/mainWindow.cpp) | C++ | 27 | 27 | 7 | 61 |
-| [mainWindow.h](/mainWindow.h) | C++ | 17 | 1 | 3 | 21 |
-| [pieces/bishop.cpp](/pieces/bishop.cpp) | C++ | 11 | 0 | 1 | 12 |
-| [pieces/blockable.cpp](/pieces/blockable.cpp) | C++ | 22 | 7 | 3 | 32 |
-| [pieces/king.cpp](/pieces/king.cpp) | C++ | 9 | 3 | 1 | 13 |
-| [pieces/knight.cpp](/pieces/knight.cpp) | C++ | 10 | 3 | 1 | 14 |
-| [pieces/pawn.cpp](/pieces/pawn.cpp) | C++ | 10 | 2 | 2 | 14 |
-| [pieces/piece.cpp](/pieces/piece.cpp) | C++ | 26 | 2 | 6 | 34 |
-| [pieces/pieceOLD.cpp](/pieces/pieceOLD.cpp) | C++ | 0 | 14 | 2 | 16 |
-| [pieces/queen.cpp](/pieces/queen.cpp) | C++ | 11 | 0 | 1 | 12 |
-| [pieces/rook.cpp](/pieces/rook.cpp) | C++ | 11 | 0 | 1 | 12 |
-| [pieces/types.h](/pieces/types.h) | C++ | 35 | 6 | 6 | 47 |
-| [saveGame.cpp](/saveGame.cpp) | C++ | 0 | 0 | 1 | 1 |
+| [cell.cpp](/cell.cpp) | C++ | 51 | 6 | 7 | 64 |
+| [cell.h](/cell.h) | C++ | 26 | 1 | 2 | 29 |
+| [game.cpp](/game.cpp) | C++ | 134 | 14 | 28 | 176 |
+| [game.h](/game.h) | C++ | 33 | 2 | 6 | 41 |
+| [loadGame.cpp](/loadGame.cpp) | C++ | 76 | 1 | 5 | 82 |
+| [loadGame.h](/loadGame.h) | C++ | 14 | 0 | 3 | 17 |
+| [main.cpp](/main.cpp) | C++ | 11 | 0 | 1 | 12 |
+| [mainWindow.cpp](/mainWindow.cpp) | C++ | 17 | 0 | 6 | 23 |
+| [mainWindow.h](/mainWindow.h) | C++ | 23 | 0 | 3 | 26 |
+| [pieces/bishop.h](/pieces/bishop.h) | C++ | 14 | 0 | 2 | 16 |
+| [pieces/blockable.cpp](/pieces/blockable.cpp) | C++ | 24 | 4 | 2 | 30 |
+| [pieces/blockable.h](/pieces/blockable.h) | C++ | 8 | 0 | 1 | 9 |
+| [pieces/king.h](/pieces/king.h) | C++ | 9 | 3 | 1 | 13 |
+| [pieces/knight.h](/pieces/knight.h) | C++ | 10 | 3 | 1 | 14 |
+| [pieces/pawn.h](/pieces/pawn.h) | C++ | 11 | 2 | 2 | 15 |
+| [pieces/piece.cpp](/pieces/piece.cpp) | C++ | 13 | 0 | 8 | 21 |
+| [pieces/piece.h](/pieces/piece.h) | C++ | 18 | 2 | 3 | 23 |
+| [pieces/queen.h](/pieces/queen.h) | C++ | 14 | 0 | 2 | 16 |
+| [pieces/rook.h](/pieces/rook.h) | C++ | 14 | 0 | 2 | 16 |
+| [pieces/types.h](/pieces/types.h) | C++ | 65 | 8 | 12 | 85 |
+| [saveGame.cpp](/saveGame.cpp) | C++ | 27 | 4 | 5 | 36 |
+| [saveGame.h](/saveGame.h) | C++ | 13 | 0 | 2 | 15 |
 | [subprojects/animationwindow/include/AnimationWindow.h](/subprojects/animationwindow/include/AnimationWindow.h) | C++ | 81 | 23 | 30 | 134 |
 | [subprojects/animationwindow/include/Color.h](/subprojects/animationwindow/include/Color.h) | C++ | 314 | 11 | 9 | 334 |
 | [subprojects/animationwindow/include/Font.h](/subprojects/animationwindow/include/Font.h) | C++ | 18 | 0 | 5 | 23 |
@@ -153,6 +156,5 @@ Total : 143 files,  52775 codes, 29022 comments, 7271 blanks, all 89068 lines
 | [subprojects/sdl2\_windows/lib/cmake/SDL2/sdl2-config-version.cmake](/subprojects/sdl2_windows/lib/cmake/SDL2/sdl2-config-version.cmake) | CMake | 10 | 0 | 3 | 13 |
 | [subprojects/sdl2\_windows/lib/cmake/SDL2/sdl2-config.cmake](/subprojects/sdl2_windows/lib/cmake/SDL2/sdl2-config.cmake) | CMake | 186 | 0 | 21 | 207 |
 | [subprojects/std\_lib\_facilities/std\_lib\_facilities.h](/subprojects/std_lib_facilities/std_lib_facilities.h) | C++ | 96 | 46 | 29 | 171 |
-| [vscode-counter.json](/vscode-counter.json) | JSON | 3 | 0 | 0 | 3 |
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)

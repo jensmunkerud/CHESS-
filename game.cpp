@@ -146,18 +146,12 @@ void Game::viewGame() {
 
 
 void Game::nextMove() {
-	data = loadGame->getNext(true);
-	if (data.size() == 64) {
-		loadMoves(data);
-	}
+	loadMoves(loadGame->getNext(true));
 }
 
 
 void Game::prevMove() {
-	data = loadGame->getNext(false);
-	if (data.size() == 64) {
-		loadMoves(data);
-	}
+	loadMoves(loadGame->getNext(false));
 }
 
 
@@ -166,9 +160,9 @@ void Game::loadMoves(std::vector<rawPiece> data) {
 	for (int row = 0; row < 8; row++) {
 		for (int col = 0; col < 8; col++) {
 			board.at(row).at(col)->clear();
-			if (data.at(row*col).team != Team::NOTEAM) {
-				// std::cout << teamToText.at(data.at(row*col).team) << " " << typeToText.at(data.at(row*col).type) << std::endl;
-				Piece* p = createNewPiece(data.at(row*col).team, data.at(row*col).type);
+			// std::cout << teamToText.at(data.at(row*8 + col).team) << " " << typeToText.at(data.at(row*8 + col).type) << std::endl;
+			if (data.at(row*8 + col).team != Team::NOTEAM) {
+				Piece* p = createNewPiece(data.at(row*8 + col).team, data.at(row*8 + col).type);
 				board.at(row).at(col)->setPiece(p);
 			}
 		}

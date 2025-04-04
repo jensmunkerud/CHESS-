@@ -3,11 +3,13 @@
 #include <fstream>
 #include <string>
 
-void goToLine(std::ifstream &file, int lineNumber) { // USED AI, file.seekg() does NOT go to specific line, but specific byte
-	file.clear();  // Clear error flags
-	file.seekg(0, std::ios::beg);  // Move to beginning
-	std::string line;
-	for (int i = 0; i < lineNumber && std::getline(file, line); ++i) {}
+std::ifstream& goToLine(std::ifstream& file, int lineNumber) {
+	// file.clear();  // Clear error flags
+	file.seekg(std::ios::beg);  // Move to beginning
+	for (int i=0; i < lineNumber; ++i) {
+		file.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+	}
+	return file;
 }
 
 bool LoadGame::openFile() {
@@ -34,7 +36,7 @@ int LoadGame::getGameLength() {
 			gameLength++;
 		}
 		gameLength /= 64;
-		std::cout << "Game was " << gameLength << " moves" << std::endl;
+		std::cout << "Game is " << gameLength << " moves" << std::endl;
 		file.clear();
 		file.seekg(0);
 		return gameLength;
@@ -58,7 +60,7 @@ std::vector<rawPiece> LoadGame::getNext(bool forward) {
 	std::vector<rawPiece> result;
 	result.clear();
 	result.reserve(64);
-	whatMove = forward ? std::min(whatMove+1,gameLength) : std::max(whatMove-1,0);
+	whatMove = forward ? std::min(whatMove+1,gameLength-1) : std::max(whatMove-1,0);
 	try {
 		goToLine(file, whatMove*64);
 		std::string newLine;
@@ -68,11 +70,10 @@ std::vector<rawPiece> LoadGame::getNext(bool forward) {
 			} else {
 				throw std::runtime_error("File not long enough");
 			}
-			std::cout << teamToText.at(result.at(i).team) << " " << typeToText.at(result.at(i).type) << std::endl;
+			// std::cout << teamToText.at(result.at(i).team) << " " << typeToText.at(result.at(i).type) << std::endl;
 		}
 		return result;
-	} catch (const std::exception& e) {
-		std::cout << e.what() << std::endl;
+	} catch (...) {
 		file.clear();
 		file.seekg(0);
 		std::cout << "RESET FILE READ TO 0" << std::endl;
