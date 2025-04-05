@@ -2,8 +2,7 @@
 
 Pawn::Pawn(Team team, Position pos) :
 	Piece(team, Type::PAWN, pos),
-	dir{team == Team::BLACK ? 1 : -1},
-	enemy{team == Team::BLACK ? Team::WHITE : Team::BLACK} {}
+	dir{team == Team::BLACK ? 1 : -1} {}
 
 
 
@@ -14,7 +13,7 @@ void Pawn::updateValidPositions(Game& game) {
 		for (int i = 1; i < 3; i++) {
 			if (game.checkCell(Position{pos.x, pos.y + dir*i}) == Team::NOTEAM) {
 				addPosition(game, Position{pos.x, pos.y + dir*i});
-			}
+			} else {break;}
 		}
 	} else {
 		// Moving only once

@@ -9,5 +9,4 @@ class Pawn : public Piece {
 
 	private:
 	const int dir;
-	const Team enemy;
 };

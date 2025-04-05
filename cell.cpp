@@ -26,7 +26,7 @@ void Cell::clear() {
 
 void Cell::setPiece(Piece* p) {
 	piece = p;
-	if (Pawn* P = dynamic_cast<Pawn*>(p)) {
+	if (Pawn* P = dynamic_cast<Pawn*>(p)) { // USED AI
 		P->testPromotion(game);
 	}
 }

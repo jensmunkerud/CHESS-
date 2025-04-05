@@ -49,7 +49,9 @@ exe = executable(
 'pieces/queen.h',
 'pieces/bishop.h',
 'pieces/knight.h',
+'pieces/knight.cpp',
 'pieces/king.h',
+'pieces/king.cpp',
   dependencies : [animationwindow_dep, sdl2_dep, std_lib_facilities_dep],
   cpp_args : compiler_flags
 )

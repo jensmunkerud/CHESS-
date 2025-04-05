@@ -1,7 +1,7 @@
 #include "piece.h"
 
 Piece::Piece(Team team, Type type, Position pos) :
-	team{team}, type{type}, pos{pos}
+	team{team}, type{type}, pos{pos}, enemy{team == Team::BLACK ? Team::WHITE : Team::BLACK}
 	{
 		filePath = typeToPath.at(type);
 		if (team == Team::BLACK) {
