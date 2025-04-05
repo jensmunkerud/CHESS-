@@ -141,6 +141,7 @@ void Game::makeMove(Position pos) {
 	selectedCell->clear();
 	selectedCell = nullptr;
 	if (isSaving) {saveGame->saveGame(board);}
+	whiteTurn = !whiteTurn;
 }
 
 void Game::promotePiece(Position pos) {

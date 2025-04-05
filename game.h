@@ -14,12 +14,13 @@ class Game {
 	void drawPath(Position pos);
 	void makeMove(Position pos);
 	void promotePiece(Position pos);
+	void turnOnSavegame();
 	Team checkCell(Position pos); // eg. putting own king in check
 	Game(MainWindow& mw);
 	std::vector<std::vector<Cell*>> board;
 	Cell* selectedCell;
 	bool isViewingGame = false;
-	void turnOnSavegame();
+	bool whiteTurn = true;
 	// Dont need destructor here?? Freeing the board vector
 	// gives malloc double free error, think animationwindow takes care of this :)
 	
@@ -31,7 +32,6 @@ class Game {
 	TDT4102::Button* nextBtn;
 	TDT4102::Button* prevBtn;
 	bool isSaving;
-	bool whiteTurn = true;
 	std::vector<rawPiece> data;
 	SaveGame* saveGame;
 	LoadGame* loadGame;

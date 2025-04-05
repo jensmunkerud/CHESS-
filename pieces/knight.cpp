@@ -8,6 +8,6 @@ void Knight::updateValidPositions(Game& game) {
 		}
 		if (game.checkCell(testPos) != team) {
 			addPosition(game, testPos);
-		}
+		}	
 	}
 }

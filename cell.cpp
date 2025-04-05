@@ -60,8 +60,10 @@ void Cell::btnPressed() {
 		}
 	} else {
 		if (piece != nullptr) {
-			piece->updateValidPositions(game);
-			game.selectedCell = this;
+			if (piece->team == Team::WHITE && game.whiteTurn || piece->team == Team::BLACK && !game.whiteTurn) {
+				piece->updateValidPositions(game);
+				game.selectedCell = this;
+			}
 		}
 	}
 }
