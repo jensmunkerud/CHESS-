@@ -40,10 +40,10 @@ Game::Game(MainWindow& mw) : mainWindow{mw} {
 			Team team = rank < 4 ? Team::BLACK : Team::WHITE;
 
 			// Populates row 1 & 6 with black / white pawns
-			// if (rank == 1 || rank == 6) {
-			// 	Piece* p = new Pawn(team, Position{file, rank});
-			// 	row.at(file)->setPiece(p);
-			// }
+			if (rank == 1 || rank == 6) {
+				Piece* p = new Pawn(team, Position{file, rank});
+				row.at(file)->setPiece(p);
+			}
 			
 			if (rank == 0 || rank == 7) {
 				Piece* p;
@@ -107,6 +107,9 @@ void Game::refreshBoard() {
 
 
 Team Game::checkCell(Position pos) {
+	if (pos.x > 7 || pos.x < 0 || pos.y > 7 || pos.y < 0) {
+		return Team::NOTEAM;
+	}
 	if (board.at(pos.y).at(pos.x)->piece != nullptr) {
 		return board.at(pos.y).at(pos.x)->piece->team;
 	}
@@ -124,16 +127,25 @@ void Game::clearPaths() {
 
 
 void Game::drawPath(Position pos) {
+	if (pos.x > 7 || pos.x < 0 || pos.y > 7 || pos.y < 0) {
+		std::cout << "Tested a position out of borders" << std::endl;
+		return;
+	}
 	board.at(pos.y).at(pos.x)->drawPath = true;
 }
 
 
 void Game::makeMove(Position pos) {
-	board.at(pos.y).at(pos.x)->setPiece(selectedCell->piece);
 	selectedCell->piece->pos = pos;
+	board.at(pos.y).at(pos.x)->setPiece(selectedCell->piece);
 	selectedCell->clear();
 	selectedCell = nullptr;
 	if (isSaving) {saveGame->saveGame(board);}
+}
+
+void Game::promotePiece(Position pos) {
+	Piece* p = new Queen(board.at(pos.y).at(pos.x)->piece->team, pos);
+	board.at(pos.y).at(pos.x)->setPiece(p);
 }
 
 

@@ -3,13 +3,11 @@
 
 class Pawn : public Piece {
 	public:
-	Pawn(Team team, Position pos) :
-		Piece(team, Type::PAWN, pos) {};
-	void updateValidPositions(Game& game) override {
-		Piece::updateValidPositions(game);
-		std::cout << "PAWN WANTS TO UPDATE POSITION" << std::endl;
-		// Straight forward
+	Pawn(Team team, Position pos);
+	void updateValidPositions(Game& game) override;
+	void testPromotion(Game& game);
 
-		// Diagonal (if piece is of opposite color)
-	}
+	private:
+	const int dir;
+	const Team enemy;
 };

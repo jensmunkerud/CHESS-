@@ -16,11 +16,11 @@ void Blockable::updateValidPositions(Game& game) {
 			}
 			if (game.checkCell(testPos) == Team::NOTEAM) {
 				game.drawPath(testPos);
-				testPositions.push_back(testPos);
+				validPositions.push_back(testPos);
 			} else if (game.checkCell(testPos) != team) {
 				// This piece is of opposite team and we MIGHT kill it
-				testPositions.push_back(testPos);
 				game.drawPath(testPos);
+				validPositions.push_back(testPos);
 				break;
 			} else {
 				break;

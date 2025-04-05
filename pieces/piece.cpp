@@ -1,8 +1,5 @@
 #include "piece.h"
 
-void Piece::updateValidPositions(Game& game) // This func gets run before the class specific ones
-	{validPositions.clear();};
-
 Piece::Piece(Team team, Type type, Position pos) :
 	team{team}, type{type}, pos{pos}
 	{
@@ -14,7 +11,10 @@ Piece::Piece(Team team, Type type, Position pos) :
 		}
 };
 
+void Piece::updateValidPositions(Game& game) // This func gets run before the class specific ones
+	{validPositions.clear();};
 
-
-
-
+void Piece::addPosition(Game& game, Position pos) {
+	validPositions.push_back(pos);
+	game.drawPath(pos);
+}

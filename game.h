@@ -13,6 +13,7 @@ class Game {
 	void clearPaths();
 	void drawPath(Position pos);
 	void makeMove(Position pos);
+	void promotePiece(Position pos);
 	Team checkCell(Position pos); // eg. putting own king in check
 	Game(MainWindow& mw);
 	std::vector<std::vector<Cell*>> board;

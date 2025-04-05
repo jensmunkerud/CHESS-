@@ -44,6 +44,7 @@ exe = executable(
 'pieces/blockable.h',
 'pieces/blockable.cpp',
 'pieces/pawn.h',
+'pieces/pawn.cpp',
 'pieces/rook.h',
 'pieces/queen.h',
 'pieces/bishop.h',

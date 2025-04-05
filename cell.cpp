@@ -1,5 +1,6 @@
 #include "cell.h"
 #include "pieces/piece.h"
+#include "pieces/pawn.h"
 
 Cell::Cell(MainWindow& mainWindow, Game& game, Position physicalPosition, Position pos) :
 	mainWindow{mainWindow}, game{game}, physicalPosition{physicalPosition} , pos{pos}{
@@ -25,6 +26,9 @@ void Cell::clear() {
 
 void Cell::setPiece(Piece* p) {
 	piece = p;
+	if (Pawn* P = dynamic_cast<Pawn*>(p)) {
+		P->testPromotion(game);
+	}
 }
 
 bool Cell::hasPiece() {
