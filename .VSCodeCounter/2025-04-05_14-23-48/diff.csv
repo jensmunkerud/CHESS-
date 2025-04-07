@@ -1,0 +1,13 @@
+"filename", "language", "C++", "comment", "blank", "total"
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/cell.cpp", "C++", 6, 0, 0, 6
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/game.cpp", "C++", 15, -15, 1, 1
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/game.h", "C++", 1, 0, 0, 1
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/king.cpp", "C++", 12, 0, 1, 13
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/king.h", "C++", 0, -3, 0, -3
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/knight.cpp", "C++", 12, 0, 1, 13
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/knight.h", "C++", 0, -3, 0, -3
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/pawn.cpp", "C++", 28, 3, 7, 38
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/pawn.h", "C++", -1, -2, 0, -3
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/piece.cpp", "C++", 4, 0, -5, -1
+"/Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+/pieces/piece.h", "C++", 1, 1, 0, 2
+"Total", "-", 78, -19, 5, 64

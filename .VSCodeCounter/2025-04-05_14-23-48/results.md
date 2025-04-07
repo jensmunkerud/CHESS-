@@ -1,17 +1,17 @@
 # Summary
 
-Date : 2025-03-25 14:17:51
+Date : 2025-04-05 14:23:48
 
 Directory /Users/jens/Library/CloudStorage/OneDrive-Personal/ELSYS/TDT4102_C++/CHESS+
 
-Total : 142 files,  52772 codes, 29022 comments, 7271 blanks, all 89065 lines
+Total : 148 files,  53148 codes, 28985 comments, 7315 blanks, all 89448 lines
 
 Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
 ## Languages
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| C++ | 135 | 52,477 | 29,020 | 7,224 | 88,721 |
+| C++ | 141 | 52,853 | 28,983 | 7,268 | 89,104 |
 | CMake | 4 | 290 | 0 | 44 | 334 |
 | Python | 2 | 4 | 2 | 2 | 8 |
 | Markdown | 1 | 1 | 0 | 1 | 2 |
@@ -19,9 +19,9 @@ Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-
 ## Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 142 | 52,772 | 29,022 | 7,271 | 89,065 |
-| . (Files) | 10 | 177 | 44 | 42 | 263 |
-| pieces | 10 | 145 | 37 | 24 | 206 |
+| . | 148 | 53,148 | 28,985 | 7,315 | 89,448 |
+| . (Files) | 12 | 442 | 26 | 70 | 538 |
+| pieces | 14 | 256 | 18 | 40 | 314 |
 | subprojects | 122 | 52,450 | 28,941 | 7,205 | 88,596 |
 | subprojects/animationwindow | 36 | 25,007 | 6,327 | 2,967 | 34,301 |
 | subprojects/animationwindow/include | 22 | 23,921 | 6,264 | 2,797 | 32,982 |

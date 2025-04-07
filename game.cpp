@@ -140,8 +140,27 @@ void Game::makeMove(Position pos) {
 	board.at(pos.y).at(pos.x)->setPiece(selectedCell->piece);
 	selectedCell->clear();
 	selectedCell = nullptr;
-	if (isSaving) {saveGame->saveGame(board);}
 	whiteTurn = !whiteTurn;
+	if (Pawn* p = dynamic_cast<Pawn*>(board.at(pos.y).at(pos.x)->piece)) {
+		if (enPassantEnabled) {
+			// GO IN FOR THE KILL
+			if (Pawn* P = dynamic_cast<Pawn*>(board.at(p->pos.y - p->dir).at(p->pos.x)->piece)) {
+				board.at(p->pos.y - p->dir).at(p->pos.x)->clear();
+			}
+		}
+
+		// Enables en passant if a pawn moved twice on its first move
+		enPassantEnabled = std::abs(p->lastPos.y - p->pos.y) == 2;
+		std::cout << "Enpassant: " << enPassantEnabled << std::endl;
+		if (enPassantEnabled) {
+			// The cell BEHIND the just moved pawn is now tagged as the enPassantLocation
+			enPassantLocation = Position{p->pos.x, p->pos.y - p->dir};
+		}
+	} else {
+		// enPassant must be done BY A PAWN in the NEXT MOVE
+		enPassantEnabled = false;
+	}
+	if (isSaving) {saveGame->saveGame(board);}
 }
 
 void Game::promotePiece(Position pos) {

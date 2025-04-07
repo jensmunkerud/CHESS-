@@ -5,9 +5,9 @@ Pawn::Pawn(Team team, Position pos) :
 	dir{team == Team::BLACK ? 1 : -1} {}
 
 
-
 void Pawn::updateValidPositions(Game& game) {
 	Piece::updateValidPositions(game);
+	lastPos = pos;
 	if (pos.y == 1 && team == Team::BLACK || pos.y == 6  && team == Team::WHITE) {
 		// Might move twice (first move)
 		for (int i = 1; i < 3; i++) {
@@ -25,6 +25,13 @@ void Pawn::updateValidPositions(Game& game) {
 	for (int i = -1; i < 3; i+=2) {
 		if (game.checkCell(Position{pos.x + i, pos.y + dir}) == enemy) {
 			addPosition(game, Position{pos.x + i, pos.y + dir});
+		}
+	}
+	
+	if (game.enPassantEnabled) {
+		if (abs(pos.x - game.enPassantLocation.x) == 1 && abs(pos.y - game.enPassantLocation.y) == 1) {
+			std::cout << "we are in bounds" << std::endl;
+			addPosition(game, game.enPassantLocation);
 		}
 	}
 

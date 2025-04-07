@@ -6,7 +6,6 @@ class Pawn : public Piece {
 	Pawn(Team team, Position pos);
 	void updateValidPositions(Game& game) override;
 	void testPromotion(Game& game);
-
-	private:
+	Position lastPos; // Used to calculate enPassant
 	const int dir;
 };
