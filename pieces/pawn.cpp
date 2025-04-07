@@ -30,11 +30,10 @@ void Pawn::updateValidPositions(Game& game) {
 	
 	if (game.enPassantEnabled) {
 		if (abs(pos.x - game.enPassantLocation.x) == 1 && abs(pos.y - game.enPassantLocation.y) == 1) {
-			std::cout << "we are in bounds" << std::endl;
+			// the enPassant location is within bounds
 			addPosition(game, game.enPassantLocation);
 		}
 	}
-
 }
 
 

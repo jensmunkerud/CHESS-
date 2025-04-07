@@ -7,7 +7,7 @@
 class Game;
 class MainWindow : public TDT4102::AnimationWindow {
 	public:
-	static constexpr int posX {600};
+	static constexpr int posX {400};
 	static constexpr int posY {120};
 	static constexpr int windowWidth {600};
 	static constexpr int windowHeight {600};

@@ -29,6 +29,7 @@ Piece* createNewPiece(Team team, Type type) { // THIS FUNCTION IS EXCLUSIVELY US
 	return p;
 }
 
+
 Game::Game(MainWindow& mw) : mainWindow{mw} {
 	for (int rank = 0; rank < 8; rank++) {
 		std::vector<Cell*> row;
@@ -77,7 +78,7 @@ Game::Game(MainWindow& mw) : mainWindow{mw} {
 		board.push_back(row);
 	}
 
-	// Initilizes save / load game stuff
+	// Initilizes save / load game
 	isSaving = false;
 	nextBtn = new TDT4102::Button(TDT4102::Button {{mainWindow.dimension/2+mainWindow.sidePad, 5}, 75, 50, "Next"});
 	prevBtn = new TDT4102::Button(TDT4102::Button {{mainWindow.dimension/2-10, 5}, 75, 50, "Prev"});
@@ -89,10 +90,12 @@ Game::Game(MainWindow& mw) : mainWindow{mw} {
 	prevBtn->setVisible(isViewingGame);
 }
 
+
 void Game::turnOnSavegame() {
 	saveGame = new SaveGame(board);
 	isSaving = true;
 }
+
 
 void Game::refreshBoard() {
 	for (std::vector<Cell*> row : board) {

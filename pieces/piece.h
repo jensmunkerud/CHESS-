@@ -19,7 +19,5 @@ class Piece {
 	protected:
 	const Team enemy;
 	void addPosition(Game& game, Position pos);
-	// WE NEED TWO SINCE THE VALIDPOSITIONS SHOULD BE CHECKMATE TESTED!!
-	// std::vector<Position> testPositions; // updateValidPositions calculates testPositions
-	std::vector<Position> validPositions; // and turns valid locations into validPositions
+	std::vector<Position> validPositions;
 };

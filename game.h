@@ -23,8 +23,6 @@ class Game {
 	bool whiteTurn = true;
 	bool enPassantEnabled = false;
 	Position enPassantLocation;
-	// Dont need destructor here?? Freeing the board vector
-	// gives malloc double free error, think animationwindow takes care of this :)
 	
 	private:
 	void undoMode(...); // Used when checking if the move is valid or not

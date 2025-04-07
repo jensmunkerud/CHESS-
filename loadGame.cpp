@@ -70,7 +70,6 @@ std::vector<rawPiece> LoadGame::getNext(bool forward) {
 			} else {
 				throw std::runtime_error("File not long enough");
 			}
-			// std::cout << teamToText.at(result.at(i).team) << " " << typeToText.at(result.at(i).type) << std::endl;
 		}
 		return result;
 	} catch (...) {
