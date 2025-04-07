@@ -4,7 +4,6 @@
 #include <string>
 
 std::ifstream& goToLine(std::ifstream& file, int lineNumber) {
-	// file.clear();  // Clear error flags
 	file.seekg(std::ios::beg);  // Move to beginning
 	for (int i=0; i < lineNumber; ++i) {
 		file.ignore(std::numeric_limits<std::streamsize>::max(),'\n');

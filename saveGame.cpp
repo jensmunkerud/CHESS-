@@ -31,6 +31,3 @@ SaveGame::~SaveGame() {
 	}
 }
 
-void makeSaveFile() {
-
-}
