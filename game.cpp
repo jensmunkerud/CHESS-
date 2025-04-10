@@ -154,7 +154,6 @@ void Game::makeMove(Position pos) {
 
 		// Enables en passant if a pawn moved twice on its first move
 		enPassantEnabled = std::abs(p->lastPos.y - p->pos.y) == 2;
-		std::cout << "Enpassant: " << enPassantEnabled << std::endl;
 		if (enPassantEnabled) {
 			// The cell BEHIND the just moved pawn is now tagged as the enPassantLocation
 			enPassantLocation = Position{p->pos.x, p->pos.y - p->dir};
@@ -195,7 +194,6 @@ void Game::loadMoves(std::vector<rawPiece> data) {
 	for (int row = 0; row < 8; row++) {
 		for (int col = 0; col < 8; col++) {
 			board.at(row).at(col)->clear();
-			// std::cout << teamToText.at(data.at(row*8 + col).team) << " " << typeToText.at(data.at(row*8 + col).type) << std::endl;
 			if (data.at(row*8 + col).team != Team::NOTEAM) {
 				Piece* p = createNewPiece(data.at(row*8 + col).team, data.at(row*8 + col).type);
 				board.at(row).at(col)->setPiece(p);
